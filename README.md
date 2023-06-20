@@ -7,8 +7,8 @@ This is A-Frame component for creating lenticular image effects in AR and VR. Th
 
 ### **Instructions**
 In order to use the component attach "lenticular-image" to a-entity. The component has the following attributes: 
-* img1: { type: "string", default: "" } - URL to first image.
-* img2: { type: "string", default: "" } - URL to second image.
+* <b>img1: { type: "string", default: "" }</b> - URL to first image.
+* <b>img2: { type: "string", default: "" }</b> - URL to second image.
 
 The code below shows the sample implementation of the component:
 ```
