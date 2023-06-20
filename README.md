@@ -37,4 +37,4 @@ Please not that meshes without textures are only supported. When doing simplific
 The project is powered by AFrame and Three.js. The 3d model (gltf file) was taken from <a href="https://github.com/mrdoob/three.js/tree/dev/examples/models/gltf/LeePerrySmith">Three.js repository</a>.
 
 ### **Demo**
-See demo of the component here: [Demo](https://simplify-modifier.glitch.me/)
+See demo of the component here: [Demo](https://lenticular-image.glitch.me/)
