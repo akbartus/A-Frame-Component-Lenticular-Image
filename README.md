@@ -2,7 +2,7 @@
 <img src="img/screenshot.gif" title="Video screen capture" alt="Video screen capture" height="400">
 
 ### **Description / Rationale**
-This is A-Frame component for creating lenticular image effects in AR and VR. The original source code was taken from <a href="https://twitter.com/ycwhk?lang=en">YCW</a>'s <a href="https://codepen.io/ycw/pen/xxVPMwB">Codepen Repository</a> and various modifications adapted to A-Frame environment.
+This is A-Frame component for creating lenticular image effects in AR and VR. The original source code was taken from <a href="https://twitter.com/ycwhk?lang=en">YCW</a>'s <a href="https://codepen.io/ycw/pen/xxVPMwB">Codepen Repository</a> and with various modifications was adapted to the A-Frame's environment.
 
 
 ### **Instructions**
