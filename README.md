@@ -6,35 +6,31 @@ This is A-Frame component for creating lenticular image effects in AR and VR. Th
 
 
 ### **Instructions**
-In order to use the component attach "simplify-modifier" to a-entity with gltf-model component. The component has the following attributes: 
-* <b>color: { type: 'color', default: '#ffffff' }</b> - Color of the simplified mesh
-* <b>wireframe: { type: 'boolean', default: false }</b> - Whether to show wireframe of simplified mesh or not
-* <b>count: { type: 'number', default: 0.7 }</b> - Vertices to remove. Accepts values from 0 to 1. 0 - almost no simplifaction is made. 1 - complete simplification. Please note that if 1 is selected, mesh will not be visible. 
-* <b>offset: { type: 'number', default: 1 }</b> - Offset of simplified mesh on x-axis. If 0 is selected, it will be in the same position as original GLTF model.
+In order to use the component attach "lenticular-image" to a-entity. The component has the following attributes: 
+* img1: { type: "string", default: "" } - URL to first image.
+* img2: { type: "string", default: "" } - URL to second image.
 
 The code below shows the sample implementation of the component:
 ```
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>A-Frame Component: Simplify Modifier</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-    <script src="js/simplifymodifier-component.js"></script>
+    <title>A-Frame Component: Lenticular Image</title>
+    <script src='https://aframe.io/releases/1.4.2/aframe.min.js'></script>
+    <script src="js/lenticular-image-component.js"></script>
 </head>
 <body>
     <a-scene>
-        <a-entity simplify-modifier="color: lightblue" gltf-model="3d/LeePerrySmith.glb" position="-1 1.5 -2" rotation="0 0 0" scale="0.2 0.2 0.2" scale="0.01 0.01 0.01"></a-entity>
-        <a-sky color="#000"></a-sky>
+        <a-entity lenticular-image="img1: img/image3.jpg; img2: img/image4.jpg" scale="0.5 0.5 0.5" position="0 1 -2"></a-entity>
+        <a-entity lenticular-image="img1: img/image1.jpg; img2: img/image2.jpg" scale="0.5 0.5 0.5" position="2 1 -2"></a-entity>
+        <a-sky color='#ECECEC'></a-sky>
     </a-scene>
 </body>
 </html>
 ```
-Please not that meshes without textures are only supported. When doing simplification if mesh is not visible, try to decrease the count value. 
 
 ### **Tech Stack**
-The project is powered by AFrame and Three.js. The 3d model (gltf file) was taken from <a href="https://github.com/mrdoob/three.js/tree/dev/examples/models/gltf/LeePerrySmith">Three.js repository</a>.
-
+The project is powered by AFrame and Three.js. The all four images used were taken from Unsplash.com: 
+<a href="https://images.unsplash.com/photo-1534330207526-8e81f10ec6fc?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb=sasha-freemind-Pv5WeEyxMWU-unsplash.jpg">image 1</a>, <a href="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb=christian-buehner-DItYlc26zVI-unsplash.jpg">image 2</a>, <a href="https://images.unsplash.com/photo-1592621385612-4d7129426394?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb=jonathan-borba-n1B6ftPB5Eg-unsplash.jpg">image 3</a>, <a href="https://images.unsplash.com/photo-1446149330071-2f5996cb1b5e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb=alex-padurariu-qJmfb_wWXhw-unsplash.jpg">image 4</a>.
+        
 ### **Demo**
 See demo of the component here: [Demo](https://lenticular-image.glitch.me/)
